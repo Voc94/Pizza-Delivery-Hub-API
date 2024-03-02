@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Form</title>
+</head>
+<body>
+<h1>User List</h1>
+<ul>
+    <th:block th:each="user : ${users}">
+        <li th:text="${user}"></li>
+    </th:block>
+</ul>
+</body>
+</html>

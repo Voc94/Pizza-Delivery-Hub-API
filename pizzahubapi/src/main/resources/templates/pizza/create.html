@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="~{fragments :: head}">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<header th:replace="~{fragments :: header}"></header>
+<form method="post" th:action="@{create}" style="padding-left:1rem">
+    <div class="form-group">
+        <label>Name
+            <input th:field="${pizza.name}" class="form-control">
+        </label>
+        <p class="alert-danger" th:errors="${pizza.name}" style="max-width: 20rem;border-radius:10px;text-align:center"></p>
+    </div>
+    <div class="form-group">
+        <label>Maker
+            <input th:field="${pizza.madeBy}" class="form-control">
+        </label>
+        <p class="alert-danger" th:errors="${pizza.madeBy}" style="max-width: 20rem;border-radius:10px;text-align:center;" ></p>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-success">
+    </div>
+</form>
+</body>
+</html>
