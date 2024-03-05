@@ -9,20 +9,16 @@
 <table class="table">
     <thead>
     <tr>
-        <th>
-            ID
-        </th>
-        <th>
-            Name
-        </th>
-        <th>
-            Maker
-        </th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Maker</th>
+        <th>Type</th>
     </tr>
     <tr th:each="pizza : ${pizzas}">
         <td th:text="${pizza.id}"></td>
         <td th:text="${pizza.name}"></td>
         <td th:text="${pizza.madeBy}"></td>
+        <td th:text="${pizza.type.displayName}"></td>
     </tr>
     </thead>
 </table>
